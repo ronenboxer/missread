@@ -1,10 +1,10 @@
 import { bookService } from "../services/book.service.js"
+import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service.js"
 
 import bookAuthors from '../cmps/book-authors.cmp.js'
 import bookCategories from '../cmps/book-categories.cmp.js'
 import bookDescription from '../cmps/book-description.cmp.js'
 import bookReview from '../cmps/book-review.cmp.js'
-import appHeader from '../cmps/app-header.cmp.js'
 
 export default {
     template: `
@@ -15,14 +15,16 @@ export default {
                     <iconify-icon inline icon="ep:close"></iconify-icon>
                 </router-link>
                 <p class="flex space-between">
-                    <router-link 
+                    <router-link
+                    class="details-nav" 
                         :to="'/book/' + this.prevBook">Previous
                     </router-link>
                     <h3 class="book-title main-font inline-block">
                         {{book.title}} 
                         <span class="additions">({{book.language}})</span>
                     </h3>
-                    <router-link 
+                    <router-link
+                    class="details-nav" 
                         :to="'/book/' + this.nextBook">Next
                     </router-link>
                 </p>
@@ -67,15 +69,18 @@ export default {
                     this.book = book
                     this.publishTime = new Date().getFullYear() - book.publishedDate
                 })
+                .catch(()=>showErrorMsg('Counld not load book'))
             bookService.getNeighbours(this.bookId)
                 .then(books=> {
                     this.nextBook = books.next
                     this.prevBook = books.prev
                 })
         },
-        saveReviews(reviews) {
+        saveReviews(reviews, action) {
             this.book.reviews = reviews
             bookService.save(this.book)
+            .then(()=>showSuccessMsg(`Review is ${action}`))
+            .catch(()=>showErrorMsg('Something went wrong'))
         }
     },
     computed: {
@@ -98,7 +103,6 @@ export default {
         bookCategories,
         bookDescription,
         bookReview,
-        appHeader
     },
     watch: {
         bookId(){

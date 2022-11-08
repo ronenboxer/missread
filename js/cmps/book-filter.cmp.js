@@ -1,39 +1,42 @@
 export default {
     template: `
     <nav class="main-nav flex justify-center main-layout">
-        <ul class="filter-list inline-block  flex column align-center">
-            <li><input
+            <label class="flex column col-reverse" for="name">Filter books
+                <input
                     id="name" 
                     type="text"
                     @input="setFilter()"
                     v-model="filterBy.name"
-                    placeholder="text"/></li>
-            <li><label for="name">Filter books</label></li>
-        </ul>
-        <ul class="filter-list inline-block flex column align-center">
-            <li><input
+                    placeholder="text"/>
+            </label>
+        
+        <label class="flex column col-reverse" for="max-price">Max price
+            
+            <input
             id="max-price"
             type="number"
             @input="setFilter()"
-            v-model="filterBy.toPrice"/></li>
-            <li><label for="max-price">Max price</label></li>
-        </ul>
-        <ul class="filter-list inline-block flex column align-center">
-            <li><input
+            v-model="filterBy.toPrice"/>
+            </label>
+        
+        <label class="flex column col-reverse" for="min-price">Min price
+            
+            <input
             id="min-price"
             type="number"
             @input="setFilter()"
-            v-model="filterBy.fromPrice"/></li>
-            <li><label for="min-price">Min price</label></li>
-        </ul>
-        <ul class="filter-list inline-block flex column align-center">
-            <li><input 
+            v-model="filterBy.fromPrice"/>
+            </label>
+        
+        <label class="flex column col-reverse" for="is-on-sale">On sale
+            
+            <input 
                     id="is-on-sale"
                     type="checkbox"
                     @input="setFilter()"
-                    v-model="filterBy.isOnSale"/></li>
-            <li><label for="is-on-sale">On sale</label></li>
-        </ul>
+                    v-model="filterBy.isOnSale"/>
+            </label>
+        
     </nav>
 `,
     data() {
@@ -48,7 +51,7 @@ export default {
     },
     methods: {
         setFilter() {
-            this.filterBy.isOnSale = !this.filterBy.isOnSale 
+            this.filterBy.isOnSale = !this.filterBy.isOnSale
             this.$emit('filter-by', { ...this.filterBy })
         }
     }

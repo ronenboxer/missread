@@ -1,4 +1,5 @@
 import bookRate from './book-rate.cmp.js'
+import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service.js"
 
 export default {
     props: ['book'],
@@ -63,7 +64,7 @@ export default {
                 this.idx = this.reviews.length - 1
             }
             else this.reviews[this.idx] = this.review
-            this.$emit('reviewsSaved', this.reviews)
+            this.$emit('reviewsSaved', this.reviews, 'saved')
         },
         updateIndex(diff) {
             if (!this.reviews.length) return this.idx = -1
@@ -77,7 +78,7 @@ export default {
         },
         deleteReview() {
             this.reviews.splice(this.idx, 1)
-            this.$emit('reviewsSaved', this.reviews)
+            this.$emit('reviewsSaved', this.reviews, 'deleted')
             this.updateIndex(1)
         }
     },

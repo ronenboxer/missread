@@ -17,17 +17,26 @@
     text-align: center;
 }
 
+.logo {
+    padding-right: 20px;
+}
+
 /* .main-nav:not(.home-page-container .main-nav) {
     margin-bottom: 20px;
 } */
 
-.nav-container > div.flex{
+.nav-container>div.flex {
     align-items: center;
 }
+
 .home-page-container>div {
     margin-top: 100px;
     align-items: center;
 
+}
+
+.nav-container {
+    margin-bottom: 20px;
 }
 
 .main-nav ul {
@@ -41,8 +50,13 @@
     padding-block: 10px;
 }
 
-.main-nav li a {
+.main-nav a {
     padding: 10px 20px;
+}
+
+.main-nav input {
+    margin-bottom: 10px;
+    margin-left: 20px;
 }
 
 .main-nav div.filter-by {
@@ -118,20 +132,20 @@
 
 .book-review {
     width: 100%;
-    padding-block:10px;
-    margin-top:10px;
+    padding-block: 10px;
+    margin-top: 10px;
     border-block: .5px solid var(--off-white);
 }
 
-.book-review h2{
-    margin:0;
+.book-review h2 {
+    margin: 0;
 }
 
-.book-review label{
+.book-review label {
     margin-bottom: 10px;
 }
 
-.book-review button{
+.book-review button {
     padding-top: 0;
 }
 
@@ -141,38 +155,141 @@
     width: 100%;
 }
 
-.book-review label span{
+.book-review label span {
     margin-bottom: 4px;
 }
 
-.book-review .input-name{
+.book-review .input-name {
     max-width: 200px;
 }
 
-.book-review textarea{
+textarea {
     resize: none;
     overflow-x: hidden;
     overflow-y: scroll;
 }
 
-.book-review .btn-switch{
+.book-review .btn-switch {
     padding-inline: 0;
 }
 
-.book-review .btn-delete{
-    bottom:0;
-    right:0;
+.book-review .btn-delete {
+    bottom: 0;
+    right: 0;
+}
+
+.book-title.search-result {
+    text-align: left;
+    margin-block: 10px;
+}
+
+.add-book {
+    margin-block: auto;
+}
+
+.user-msg {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    padding: 10px;
+    transition: opacity 1s;
+}
+
+.edit-book {
+    min-width: 300px;
+    max-width: 500px;
+    margin: 30px;
+}
+
+.edit-book form {
+    padding: 30px;
+    margin-block: 30px;
+
+}
+
+.edit-book form label {
+    margin-bottom: 20px;
+}
+
+.edit-book form input {
+    margin-top: 5px;
+}
+
+.edit-book form .input-text input {
+    background-color: transparent;
+}
+
+.edit-book .input-select input {
+    width: 100%;
+}
+
+.edit-book .input-text input {
+    border: none;
+    border-bottom: 1px solid var(--dark-green)
+}
+
+.edit-book .btns-container {
+    gap: 10px;
+}
+
+.edit-book .btns-container a {
+    width: 100%;
+}
+
+.edit-book .btns-container .btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    font-size: 1.2rem;
+    padding-block: 7px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.about-nav ul{
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+
+.about-content{
+    margin-inline:60px !important;
+}
+
+.contact-form{
+    padding:30px;
+}
+
+.contact-form div *{
+    width: 100%;
+    margin-block: 15px;
+    border-radius: 0;
+    border: none;
+}
+
+.main-footer{
+    margin-top:40px;
+    bottom: 0;
+    padding: 20px;
+}
+
+footer p{
+    text-align: center;
 }
 
 @media (max-width: 540px) {
-    .book-details > div.flex{
+    .book-details>div.flex {
         display: block;
     }
 
-    .book-details .book-cover{
+    .book-details .book-cover {
         margin-right: 10px;
     }
 }
+
 @media (min-width: 880px) {
     .main-layout:not(.full, .home-page-container *) {
         margin-inline: auto !important;

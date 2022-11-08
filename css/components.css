@@ -107,6 +107,11 @@
     color: var(--off-white);
 }
 
+.book-details a.details-nav{
+    font-family: 'Source Sans Pro';
+    font-size: 1.3rem;
+}
+
 .book-review {
     font-family: 'Source Sans Pro';
 }
@@ -151,4 +156,89 @@
 
 .book-review .btn-switch:hover {
     background: var(--off-white);
+}
+
+.book-title.search-result {
+    font-family: 'Source Sans Pro';
+    font-size: 1.75rem;
+}
+
+.add-book{
+    border: none;
+    background-color: transparent;
+    color: var(--dark-green);
+    font-size: 1.75rem;
+}
+
+.add-book:hover{
+    color: var(--light-green);
+}
+
+.edit-book form{
+    background-color: var(--green-white);
+}
+
+.edit-book label{
+    font-family: 'Source Sans Pro';
+}
+
+.edit-book .btns-container a{
+    
+    background-color: var(--green-white);
+}
+
+.edit-book .btns-container a:hover{
+    background-color: var(--off-white);
+}
+
+.edit-book .btns-container .btn{
+    font-family: 'Source Sans Pro';
+    color: var(--dark-green);
+}
+.user-msg {
+    font-family: 'Source Sans Pro';
+    font-size: 1.2rem;
+    color: var(--dark-green);
+    background-color: rgba(238, 238, 238, 0.6);
+    text-align: center;
+}
+
+.about-nav li{
+    font-family: 'Source Sans Pro';
+    font-size: 1.5rem;
+}
+
+.mini-logo{
+    font-family: 'Lobster', cursive;  
+    text-align: center;
+    color: var(--light-green);
+}
+
+.about-nav a.router-link-active{
+    text-decoration: underline;
+    color: black;
+}
+
+.about-content{
+    font-family: 'Source Sans Pro';
+    color: var(--light-green);
+}
+
+.contact-form{
+    background-color: var(--green-gray);
+}
+
+.contact-form div *{
+    font-family: 'Source Sans Pro';
+    font-size: 1.1rem;
+}
+
+.main-footer{
+    background-color: var(--off-white);
+}
+
+footer p{
+    font-family: 'Source Sans Pro';
+    color: var(--light-green);
+    
 }
