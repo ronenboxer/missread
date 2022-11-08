@@ -1,0 +1,26 @@
+@import url(typography.css);
+@import url(basics.css);
+@import url(helpers.css);
+@import url(layout.css);
+@import url(components.css);
+
+:root{
+    --dark-green: rgb(33,50,45);
+    --mellow-green: rgb(61,84,70);
+    --light-green: rgb(101,121,108);
+    --green-gray: rgb(158,167,162);
+    --green-white: rgb(172,181,176);
+    --off-white: rgb(188,192,185);
+}
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    background-color: #eee;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}

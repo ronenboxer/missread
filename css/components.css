@@ -1,0 +1,154 @@
+.home-page-container {
+    background-image: url(../imgs/books2.jpeg);
+    background-size: cover;
+    background-position: left;
+}
+
+.welcome-header {
+    font-family: 'Source Sans Pro';
+}
+
+.welcome-header h1 {
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--mellow-green);
+}
+
+.welcome-header p {
+    font-size: 1.3rem;
+}
+
+.pop {
+    color: var(--dark-green);
+    font-weight: 800;
+}
+
+.main-header {
+    background-image: url(../imgs/books1.jpeg);
+}
+
+.logo {
+    letter-spacing: .2rem;
+    color: inherit;
+    font-family: 'Lobster', cursive;
+}
+
+.logo.bright {
+    color: white;
+}
+
+.logo.bright:hover {
+    text-decoration: underline;
+    color: var(--off-white);
+}
+
+.main-nav a:hover {
+    color: var(--off-white);
+    text-decoration: underline;
+}
+
+.nav-container {
+    background-color: var(--dark-green);
+}
+
+.main-nav:not(.home-page-container .main-nav) {
+    /* background-color: var(--dark-green); */
+    font-family: 'Source Sans Pro';
+}
+
+.home-page-container>div {
+    background-color: var(--dark-green);
+    background-color: rgba(238, 238, 238, 0.5);
+    color: var(--dark-green);
+}
+
+.home-page-container>a.logo:hover {
+    text-decoration: underline;
+}
+
+.home-page-container .main-nav a {
+    color: inherit;
+    font-family: 'Source Sans Pro';
+}
+
+.book-card {
+    background-color: var(--off-white);
+    cursor: pointer;
+    color: var(--dark-green);
+    font-family: 'News Cycle', sans-serif;
+}
+
+.book-card:hover {
+    opacity: .9;
+}
+
+
+.book-title {
+    font-size: 2em;
+    text-transform: capitalize;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.book-details {
+    background-color: var(--light-green);
+    color: var(--dark-green);
+}
+
+.btn-close {
+    font-size: 1.5em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--green-gray)
+}
+
+.btn-close:hover {
+    color: var(--off-white);
+}
+
+.book-review {
+    font-family: 'Source Sans Pro';
+}
+
+.book-review h2 {
+    font-weight: 400;
+    text-decoration: underline;
+    color: var(--off-white);
+}
+
+.book-review .input-name {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--off-white);
+    color: var(--off-white)
+}
+
+.book-review label span {
+    font-weight: bold;
+}
+
+.book-review .btn-switch {
+    font-size: 30px;
+}
+
+.book-review .btn-review {
+    font-size: 1.5rem;
+    color: var(--dark-green);
+    background: transparent;
+}
+
+.book-review button {
+    border: 0;
+    border-radius: 0;
+    background-color: var(--green-gray);
+}
+
+.book-review .btn-review:hover {
+    text-decoration: underline;
+    color: var(--off-white);
+}
+
+.book-review .btn-switch:hover {
+    background: var(--off-white);
+}

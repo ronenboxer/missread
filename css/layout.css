@@ -1,0 +1,180 @@
+.home-page-container {
+    height: 100vh;
+}
+
+.welcome-header {
+    width: 350px;
+    margin-top: 270px;
+    padding-inline-start: 20px;
+}
+
+.main-header {
+    height: 300px;
+}
+
+.main-header .logo {
+    margin: 0;
+    text-align: center;
+}
+
+/* .main-nav:not(.home-page-container .main-nav) {
+    margin-bottom: 20px;
+} */
+
+.nav-container > div.flex{
+    align-items: center;
+}
+.home-page-container>div {
+    margin-top: 100px;
+    align-items: center;
+
+}
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav ul li {
+    text-align: center;
+    padding-block: 10px;
+}
+
+.main-nav li a {
+    padding: 10px 20px;
+}
+
+.main-nav div.filter-by {
+    align-self: center;
+}
+
+.books-container {
+    margin-block: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    width: 100%;
+    height: 100%;
+}
+
+.book-card .book-cover {
+    width: 100%;
+}
+
+.book-card .book-title {
+    text-align: center;
+    margin: 0;
+    padding: .5em;
+}
+
+.book-card .book-price {
+    margin-inline-start: 10px;
+}
+
+.screen {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.book-details {
+    padding: 20px;
+    margin-block: 50px;
+    min-height: fit-content;
+}
+
+.book-details .flex {
+    gap: 20px;
+    width: 100%;
+}
+
+.book-details .book-cover {
+    float: left;
+    max-width: 50%;
+    margin-bottom: auto;
+}
+
+.book-details .btn-close {
+    float: right;
+}
+
+.book-details .switch-review {
+    padding-inline: 0;
+}
+
+.book-details .book-description {
+    text-align: justify;
+}
+
+.book-details .book-authors span:not(:last-child) a.book-author::after,
+.book-details .book-categories span:not(:last-child) a.book-category::after {
+    content: ' | ';
+}
+
+.book-review {
+    width: 100%;
+    padding-block:10px;
+    margin-top:10px;
+    border-block: .5px solid var(--off-white);
+}
+
+.book-review h2{
+    margin:0;
+}
+
+.book-review label{
+    margin-bottom: 10px;
+}
+
+.book-review button{
+    padding-top: 0;
+}
+
+.book-review>.grid {
+    grid-template-columns: 30px 1fr 30px;
+    gap: 30px;
+    width: 100%;
+}
+
+.book-review label span{
+    margin-bottom: 4px;
+}
+
+.book-review .input-name{
+    max-width: 200px;
+}
+
+.book-review textarea{
+    resize: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.book-review .btn-switch{
+    padding-inline: 0;
+}
+
+.book-review .btn-delete{
+    bottom:0;
+    right:0;
+}
+
+@media (max-width: 540px) {
+    .book-details > div.flex{
+        display: block;
+    }
+
+    .book-details .book-cover{
+        margin-right: 10px;
+    }
+}
+@media (min-width: 880px) {
+    .main-layout:not(.full, .home-page-container *) {
+        margin-inline: auto !important;
+    }
+}
